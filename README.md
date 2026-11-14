@@ -1,93 +1,30 @@
-# YouTubeMusic-Myspoti
+# YouTube Music per Myspoti
 
+Adattamento funzionale per Myspoti ispirato all'estensione YouTube Music per Echo: collega le tracce Spotify a brani ufficiali YouTube Music e propone l'audio AAC/M4A per riproduzione e download. Non è una conversione automatica del codice Kotlin di Echo. È basato sul progetto GPL di y-exe (vedi Provenienza).
 
+## Installazione
 
-## Getting started
+1. Usa Myspoti **2.0.2 o successivo** e copia `extension.zip` sul dispositivo.
+2. Apri **Impostazioni → Estensioni → Installa da file**, seleziona lo ZIP, leggi e accetta le autorizzazioni.
+3. In **Impostazioni → Riproduzione → sorgenti audio**, sposta questa estensione sopra Spotify; altrimenti Spotify viene interrogato prima e l'estensione non viene usata per lo streaming.
+4. Per l'offline, abilita questa sorgente in **Impostazioni → Download** e scegli la qualità adatta. I download sono gestiti da Myspoti.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+Nomi e posizione delle voci possono variare tra versioni. Quando non trova una sorgente compatibile, la riproduzione può passare a Spotify secondo l'ordine impostato.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+## Risoluzione problemi
 
-## Add your files
+Dalla versione 1.0.1, un HTTP 302 nel controllo di stato non disattiva più la sorgente. Il reindirizzamento dimostra solo che il server risponde: non garantisce che le ricerche o gli stream siano utilizzabili sul dispositivo. Se i brani non partono, controlla il dettaglio degli errori nell’estensione e verifica che sia sopra Spotify nell’ordine delle sorgenti.
 
-* [Create](https://docs.gitlab.com/user/project/repository/web_editor/#create-a-file) or [upload](https://docs.gitlab.com/user/project/repository/web_editor/#upload-a-file) files
-* [Add files using the command line](https://docs.gitlab.com/topics/git/add_files/#add-files-to-a-git-repository) or push an existing Git repository with the following command:
+## Funzionamento e limiti
 
-```
-cd existing_repo
-git remote add origin https://gitlab.com/solidsnakeater/youtubemusic-myspoti.git
-git branch -M main
-git push -uf origin main
-```
+- Cerca nel catalogo YouTube Music i brani contrassegnati come registrazioni ufficiali (ATV), confrontando titolo, artisti e durata. La corrispondenza non è una prova d'identità della registrazione e può essere errata.
+- Propone solo URL audio AAC/M4A diretti, senza DRM e senza firme cifrate; nessuna decifratura, nessun login o cookie. Alcune tracce, video musicali, brani protetti, versioni live e risultati non ufficiali non sono supportati. Myspoti può rifiutare download di durata o formato non conformi.
+- I servizi YouTube possono modificare o limitare gli endpoint, bloccare l'accesso o far scadere gli URL; ciò può impedire il funzionamento, anche dopo un test riuscito. Verifica e rispetta i termini applicabili e i diritti sui contenuti.
+- Non trasferisce interfaccia Echo, catalogo navigabile, libreria o playlist YouTube Music, account, video e altre funzioni Echo. Myspoti parte da brani Spotify e richiede una sorgente audio o download per ogni traccia.
+- Le richieste sono dirette a music.youtube.com, youtubei.googleapis.com e googlevideo.com; inviano i termini di ricerca al servizio. Nessun server intermedio è previsto.
 
-## Integrate with your tools
+## Verifica e sviluppo
 
-* [Set up project integrations](https://gitlab.com/solidsnakeater/youtubemusic-myspoti/-/settings/integrations)
+`manifest.json` e `main.js` sono i sorgenti; `node scripts/pack.js` genera lo ZIP. Il risolutore proviene da [y-exe/myspoti-youtube-music](https://github.com/y-exe/myspoti-youtube-music), commit `37c588fe613245cd7dd5c854cd43c8625824a46e`. La modifica aggiunge la sorgente audio e una scadenza più breve per il suo hook, e limita le attese in caso di rate limiting. Il codice, la licenza GPL-3.0-only e gli avvisi di terze parti sono nel pacchetto sorgente distribuito insieme allo ZIP.
 
-## Collaborate with your team
-
-* [Invite team members and collaborators](https://docs.gitlab.com/user/project/members/)
-* [Create a new merge request](https://docs.gitlab.com/user/project/merge_requests/creating_merge_requests/)
-* [Automatically close issues from merge requests](https://docs.gitlab.com/user/project/issues/managing_issues/#closing-issues-automatically)
-* [Enable merge request approvals](https://docs.gitlab.com/user/project/merge_requests/approvals/)
-* [Set auto-merge](https://docs.gitlab.com/user/project/merge_requests/auto_merge/)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-* [Get started with GitLab CI/CD](https://docs.gitlab.com/ci/quick_start/)
-* [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/user/application_security/sast/)
-* [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/topics/autodevops/requirements/)
-* [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/user/clusters/agent/)
-* [Set up protected environments](https://docs.gitlab.com/ci/environments/protected_environments/)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+Test di rete con l'harness Node: `node scripts/harness.js test-track.json --full --audio --no-i18n` (senza `--audio` prova il download). I test via rete dipendono dal servizio e non sostituiscono una verifica su dispositivo. Non affiliato a YouTube, Google, Spotify o Myspoti.
