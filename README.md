@@ -21,6 +21,8 @@
 1. Melzo → **Settings → Extensions → Store**, install from `https://github.com/prakha194/Yt-music-for-Melzo`
 2. **Settings → Playback → audio sources** → drag this extension **above Spotify**
 
+3. **Other fork of myspoti,orpheon, etc also does support this extension**
+
 ## What it does
 
 - **Playback** — matches the song's title, artist and length against YouTube Music's official catalogue, searching in the song's own language, and streams the AAC/M4A it finds.
@@ -41,7 +43,8 @@ Built on other people's work, all GPL-3.0:
 - **solidsnakeater** — the streaming adaptation (`youtubemusic-myspoti`).
 - **y-exe** — the original YouTube Music Download Helper: search, matching, verification.
 
-This repository only changes the id, name, author, icon and text. The code is theirs.
+Note
+**This repository only changes the id, name, author, icon and text. with minor structuring and version compatibility. so that user without updating apps can also use**
 
 ## Licence
 
