@@ -21,7 +21,7 @@
 1. Melzo → **Settings → Extensions → Store**, install from `https://github.com/prakha194/Yt-music-for-Melzo`
 2. **Settings → Playback → audio sources** → drag this extension **above Spotify**
 
-3. **Other fork of myspoti,orpheon, etc also does support this extension**
+3. **Other fork of myspoti, orpheon, etc also does support this extension**
 
 ## What it does
 
