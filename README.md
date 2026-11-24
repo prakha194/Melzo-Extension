@@ -14,6 +14,8 @@
   <a href="https://github.com/prakha194/Melzo"><img src="https://img.shields.io/badge/made_for-Melzo-1DB954?style=flat-square" alt="Made for Melzo"></a>
 </p>
 
+🌐 **[Website: Melzo — Spotify Pro extension](https://prakha194.github.io/Melzo/extensions.html)**
+
 ---
 
 ## Install
