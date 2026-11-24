@@ -31,18 +31,6 @@
 
 Permissions: *Play audio from elsewhere* (critical), *Provide downloads* (critical), *Use the internet*. Hosts: `music.youtube.com`, `youtubei.googleapis.com`, `*.googlevideo.com`.
 
-## Credits
-
-Built on other people's work, all GPL-3.0:
-
-<p align="center">
-  <a href="https://gitlab.com/solidsnakeater/youtubemusic-myspoti"><img src="https://img.shields.io/badge/streaming_engine-solidsnakeater-blue?style=flat-square" alt="solidsnakeater"></a>
-  <a href="https://github.com/y-exe/orpheon-youtube-music"><img src="https://img.shields.io/badge/matching_engine-y--exe-blue?style=flat-square" alt="y-exe"></a>
-</p>
-
-- **solidsnakeater** — the streaming adaptation (`youtubemusic-myspoti`).
-- **y-exe** — the original YouTube Music Download Helper: search, matching, verification.
-
 > [!NOTE]
 > ### 📝 About This Repository
 >
@@ -57,6 +45,18 @@ Built on other people's work, all GPL-3.0:
 > | 💬 `text` | ✅ |
 >
 > ✅ **No app update needed.** Users can use it without updating their apps.
+> 
+## Credits
+
+Built on other people's work, all GPL-3.0:
+
+<p align="center">
+  <a href="https://gitlab.com/solidsnakeater/youtubemusic-myspoti"><img src="https://img.shields.io/badge/streaming_engine-solidsnakeater-blue?style=flat-square" alt="solidsnakeater"></a>
+  <a href="https://github.com/y-exe/orpheon-youtube-music"><img src="https://img.shields.io/badge/matching_engine-y--exe-blue?style=flat-square" alt="y-exe"></a>
+</p>
+
+- **solidsnakeater** — the streaming adaptation (`youtubemusic-myspoti`).
+- **y-exe** — the original YouTube Music Download Helper: search, matching, verification.
 
 ## Licence
 
