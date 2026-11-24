@@ -1,8 +1,8 @@
 {
   "id": "io.github.prakha194.melzo.stream",
   "name": "Melzo — Spotify Pro",
-  "version": "1.0.3",
-  "versionCode": 4,
+  "version": "1.0.4",
+  "versionCode": 5,
   "author": "Prashant",
   "description": "Plays and downloads matching tracks from YouTube Music: it searches in the song's own language and picks the official recording.",
   "homepage": "https://github.com/prakha194/Yt-music-for-Melzo",
@@ -14,7 +14,7 @@
     "melzo",
     "multilingual"
   ],
-  "changelog": "1.0.3: New name and icon.",
+  "changelog": "1.0.4: New README.",
   "actions": [
     {
       "name": "audio.source",
