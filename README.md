@@ -1,6 +1,8 @@
 # Melzo — YT Music Stream
 
-A Melzo / Spoon extension that finds the official YouTube Music recording of the song you are
+**Maintained by Prashant** — [github.com/prakha194](https://github.com/prakha194) · [Yt-music-for-Melzo](https://github.com/prakha194/Yt-music-for-Melzo)
+
+A Melzo extension that finds the official YouTube Music recording of the song you are
 playing and offers its AAC/M4A audio for **playback** and for **downloads**. When it cannot match a
 song, the app plays from Spotify as before.
 
