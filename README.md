@@ -63,3 +63,8 @@ Built on other people's work, all GPL-3.0:
 GPL-3.0 — see [LICENSE](LICENSE). Reuse it, keep these credits, publish your source under the same licence.
 
 Maintained by [Prashant](https://github.com/prakha194).
+
+<p align="center">
+  <a href="https://prakha194.github.io/buy-me-a-coffee/"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me a Coffee" height="44"></a>
+  <a href="https://github.com/sponsors/prakha194"><img src="https://img.shields.io/badge/Sponsor_on_GitHub-%E2%9D%A4-ea4aaa?style=for-the-badge&logo=githubsponsors&logoColor=white" alt="Sponsor on GitHub" height="44"></a>
+</p>
