@@ -23,6 +23,10 @@
 
 3. **Other fork of myspoti, orpheon, etc also does support this extension**
 
+## Rate it
+
+Vote with 👍 or 👎 on the [Ratings issue](https://github.com/prakha194/Melzo-Extension/issues/1) — Melzo's store shows those reactions as stars. Or tap 👍 in the extension's page inside Melzo's store.
+
 ## What it does
 
 - **Playback** — matches the song's title, artist and length against YouTube Music's official catalogue, searching in the song's own language, and streams the AAC/M4A it finds.
