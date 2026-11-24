@@ -43,8 +43,20 @@ Built on other people's work, all GPL-3.0:
 - **solidsnakeater** — the streaming adaptation (`youtubemusic-myspoti`).
 - **y-exe** — the original YouTube Music Download Helper: search, matching, verification.
 
-Note
-**This repository only changes the id, name, author, icon and text. with minor structuring and version compatibility. so that user without updating apps can also use**
+> [!NOTE]
+> ### 📝 About This Repository
+>
+> This repo only modifies the following, with minor structuring and version-compatibility tweaks:
+>
+> | Field | Changed |
+> |-------|---------|
+> | 🆔 `id` | ✅ |
+> | 🏷️ `name` | ✅ |
+> | 👤 `author` | ✅ |
+> | 🖼️ `icon` | ✅ |
+> | 💬 `text` | ✅ |
+>
+> ✅ **No app update needed.** Users can use it without updating their apps.
 
 ## Licence
 
