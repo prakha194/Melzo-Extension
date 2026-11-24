@@ -1,8 +1,8 @@
 {
   "id": "io.github.prakha194.melzo.stream",
-  "name": "Melzo — YT Music Stream",
-  "version": "1.0.2",
-  "versionCode": 3,
+  "name": "Melzo — Spotify Pro",
+  "version": "1.0.3",
+  "versionCode": 4,
   "author": "Prashant",
   "description": "Plays and downloads matching tracks from YouTube Music: it searches in the song's own language and picks the official recording.",
   "homepage": "https://github.com/prakha194/Yt-music-for-Melzo",
@@ -14,7 +14,7 @@
     "melzo",
     "multilingual"
   ],
-  "changelog": "1.0.2: English release notes, and the app-version requirement is gone, so the extension installs on any Orpheon, Myspoti, Spoon or Melzo build.",
+  "changelog": "1.0.3: New name and icon.",
   "actions": [
     {
       "name": "audio.source",
