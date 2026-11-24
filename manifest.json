@@ -5,7 +5,7 @@
   "versionCode": 6,
   "author": "Prashant",
   "description": "Made for Melzo, an ad-free Spotify music player. Streams and downloads high-quality audio from YouTube Music: it searches in the song's own language and picks the official recording. Get the app: https://github.com/prakha194/Melzo",
-  "homepage": "https://github.com/prakha194/Yt-music-for-Melzo",
+  "homepage": "https://github.com/prakha194/Melzo-Extension",
   "category": "tools",
   "tags": [
     "youtube-music",

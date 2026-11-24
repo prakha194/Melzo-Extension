@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/prakha194/Yt-music-for-Melzo/releases/latest"><img src="https://img.shields.io/github/v/release/prakha194/Yt-music-for-Melzo?style=flat-square" alt="Release"></a>
+  <a href="https://github.com/prakha194/Melzo-Extension/releases/latest"><img src="https://img.shields.io/github/v/release/prakha194/Melzo-Extension?style=flat-square" alt="Release"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-GPL--3.0-green?style=flat-square" alt="License"></a>
   <a href="https://github.com/prakha194/Melzo"><img src="https://img.shields.io/badge/made_for-Melzo-1DB954?style=flat-square" alt="Made for Melzo"></a>
 </p>
@@ -18,7 +18,7 @@
 
 ## Install
 
-1. Melzo → **Settings → Extensions → Store**, install from `https://github.com/prakha194/Yt-music-for-Melzo`
+1. Melzo → **Settings → Extensions → Store**, install from `https://github.com/prakha194/Melzo-Extension`
 2. **Settings → Playback → audio sources** → drag this extension **above Spotify**
 
 3. **Other fork of myspoti, orpheon, etc also does support this extension**
