@@ -1,30 +1,56 @@
-# YouTube Music per Myspoti
+# Melzo — YT Music Stream
 
-Adattamento funzionale per Myspoti ispirato all'estensione YouTube Music per Echo: collega le tracce Spotify a brani ufficiali YouTube Music e propone l'audio AAC/M4A per riproduzione e download. Non è una conversione automatica del codice Kotlin di Echo. È basato sul progetto GPL di y-exe (vedi Provenienza).
+A Melzo / Spoon extension that finds the official YouTube Music recording of the song you are
+playing and offers its AAC/M4A audio for **playback** and for **downloads**. When it cannot match a
+song, the app plays from Spotify as before.
 
-## Installazione
+> **Provenance.** This is a Melzo build of
+> [youtubemusic-myspoti](https://gitlab.com/solidsnakeater/youtubemusic-myspoti) by **solidsnakeater**,
+> itself an adaptation of [YouTube Music Download Helper](https://github.com/y-exe/orpheon-youtube-music)
+> by **y-exe**. Both are GPL-3.0. All of the matching and playback code is theirs — this fork changes
+> the extension id, name, author and metadata only, and adds the notice the GPL asks for.
+> If you want the original, install it from its own repository.
 
-1. Usa Myspoti **2.0.2 o successivo** e copia `extension.zip` sul dispositivo.
-2. Apri **Impostazioni → Estensioni → Installa da file**, seleziona lo ZIP, leggi e accetta le autorizzazioni.
-3. In **Impostazioni → Riproduzione → sorgenti audio**, sposta questa estensione sopra Spotify; altrimenti Spotify viene interrogato prima e l'estensione non viene usata per lo streaming.
-4. Per l'offline, abilita questa sorgente in **Impostazioni → Download** e scegli la qualità adatta. I download sono gestiti da Myspoti.
+## What it asks for
 
-Nomi e posizione delle voci possono variare tra versioni. Quando non trova una sorgente compatibile, la riproduzione può passare a Spotify secondo l'ordine impostato.
+| Action | Level | Why |
+|---|---|---|
+| Play audio from elsewhere | critical | Plays the matching track from YouTube Music |
+| Provide downloads | critical | Finds the official song on YouTube Music to download |
+| Use the internet | normal | Searches songs, gets audio URLs, checks them |
 
-## Risoluzione problemi
+Hosts it may contact: `music.youtube.com`, `youtubei.googleapis.com`, `*.googlevideo.com`. Nothing
+else, and nothing is sent to the author.
 
-Dalla versione 1.0.1, un HTTP 302 nel controllo di stato non disattiva più la sorgente. Il reindirizzamento dimostra solo che il server risponde: non garantisce che le ricerche o gli stream siano utilizzabili sul dispositivo. Se i brani non partono, controlla il dettaglio degli errori nell’estensione e verifica che sia sopra Spotify nell’ordine delle sorgenti.
+## Install
 
-## Funzionamento e limiti
+1. In Melzo: **Settings → Extensions → Store**, then install from the address
+   `https://github.com/prakha194/Yt-music-for-Melzo`
+   (or **Install from a file** and pick `extension.zip` from the release).
+2. Read the permissions, accept, done.
+3. **Make it the audio source:** Settings → Playback → audio sources, and move this extension
+   **above Spotify**. Otherwise Spotify is asked first and the extension is never used for
+   playback.
+4. For offline listening, enable this source in **Settings → Downloads** and pick the quality there.
 
-- Cerca nel catalogo YouTube Music i brani contrassegnati come registrazioni ufficiali (ATV), confrontando titolo, artisti e durata. La corrispondenza non è una prova d'identità della registrazione e può essere errata.
-- Propone solo URL audio AAC/M4A diretti, senza DRM e senza firme cifrate; nessuna decifratura, nessun login o cookie. Alcune tracce, video musicali, brani protetti, versioni live e risultati non ufficiali non sono supportati. Myspoti può rifiutare download di durata o formato non conformi.
-- I servizi YouTube possono modificare o limitare gli endpoint, bloccare l'accesso o far scadere gli URL; ciò può impedire il funzionamento, anche dopo un test riuscito. Verifica e rispetta i termini applicabili e i diritti sui contenuti.
-- Non trasferisce interfaccia Echo, catalogo navigabile, libreria o playlist YouTube Music, account, video e altre funzioni Echo. Myspoti parte da brani Spotify e richiede una sorgente audio o download per ogni traccia.
-- Le richieste sono dirette a music.youtube.com, youtubei.googleapis.com e googlevideo.com; inviano i termini di ricerca al servizio. Nessun server intermedio è previsto.
+Menu names move between versions; if a step is missing, look for the closest name in Settings.
 
-## Verifica e sviluppo
+## How it matches
 
-`manifest.json` e `main.js` sono i sorgenti; `node scripts/pack.js` genera lo ZIP. Il risolutore proviene da [y-exe/myspoti-youtube-music](https://github.com/y-exe/myspoti-youtube-music), commit `37c588fe613245cd7dd5c854cd43c8625824a46e`. La modifica aggiunge la sorgente audio e una scadenza più breve per il suo hook, e limita le attese in caso di rate limiting. Il codice, la licenza GPL-3.0-only e gli avvisi di terze parti sono nel pacchetto sorgente distribuito insieme allo ZIP.
+The song's title, artist and length are matched against YouTube Music's official catalogue,
+searching in the song's own writing system with English as a fallback. Covers, live versions,
+remixes and karaoke wording are refused; remaster notes cost score instead of refusing. Rate limits
+are reported to the app, which retries later rather than marking the song as not found.
 
-Test di rete con l'harness Node: `node scripts/harness.js test-track.json --full --audio --no-i18n` (senza `--audio` prova il download). I test via rete dipendono dal servizio e non sostituiscono una verifica su dispositivo. Non affiliato a YouTube, Google, Spotify o Myspoti.
+## Limits worth knowing
+
+- It depends on YouTube Music's **private endpoints**. When YouTube changes them, matching stops
+  until the code is updated upstream.
+- It is the YouTube Music case: the app's extension policy allows it only if you have the right to
+  the content you play, and the Store may hide or block it on a report.
+- Max quality is what YouTube serves (AAC 256 / Opus 160 / AAC 128) — there is no lossless here.
+
+## Licence
+
+GPL-3.0. See `LICENSE` (the original notices are kept). If you reuse this, credit
+solidsnakeater, y-exe and the Melzo build, and publish your complete source under GPL-3.0.

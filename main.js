@@ -1,6 +1,8 @@
 /* YouTube Music Download Helper — Orpheon(旧Myspoti)向けdownload-source拡張
  * Copyright (C) 2026 y-exe
  * SPDX-License-Identifier: GPL-3.0-only
+ * Modified 2026 by Prashant for the Melzo build (new extension id and metadata);
+ * the matching and playback code is unchanged from the original.
  * 照合の基準は私のMyspotiフォークから、アルバム加減・リマスター減点の発想はspotDLから
  * (出典: THIRD_PARTY_NOTICES.md)。Spotify音源・アカウント・外部サーバーは使わない。
  */
