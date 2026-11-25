@@ -1,0 +1,24 @@
+{
+  "format": 1,
+  "name": "Melzo extensions",
+  "extensions": [
+    {
+      "id": "io.github.prakha194.melzo.stream",
+      "name": "Melzo — Spotify Pro",
+      "version": "1.0.5",
+      "versionCode": 6,
+      "author": "Prashant",
+      "description": "Made for Melzo: streams and downloads high-quality audio from YouTube Music, searching in the song's own language and picking the official recording.",
+      "url": "https://github.com/prakha194/Melzo-Extension/releases/download/v1.0.5/extension.zip",
+      "sha256": "eca502e0841b7b224ae736e59933068c86e24e81140199f477f06aabec2abfc8",
+      "size": 234610,
+      "icon_url": "https://raw.githubusercontent.com/prakha194/Melzo-Extension/main/icon.png",
+      "homepage": "https://github.com/prakha194/Melzo-Extension",
+      "updated_at": "2026-11-26",
+      "category": "tools",
+      "tags": ["youtube-music", "streaming", "downloads", "melzo"],
+      "min_app_version": "1.0.0",
+      "changelog": "Major upgrade in quality, for you all."
+    }
+  ]
+}
