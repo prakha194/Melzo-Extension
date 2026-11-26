@@ -1,10 +1,10 @@
 {
   "id": "io.github.prakha194.melzo.stream",
   "name": "Melzo — Spotify Pro",
-  "version": "1.0.5",
-  "versionCode": 6,
+  "version": "1.0.6",
+  "versionCode": 7,
   "author": "Prashant",
-  "description": "Made for Melzo, an ad-free Spotify music player. Streams and downloads high-quality audio from YouTube Music: it searches in the song's own language and picks the official recording. Get the app: https://github.com/prakha194/Melzo",
+  "description": "Made for Melzo, an ad-free Spotify music player. Streams and downloads high-quality audio from YouTube Music: it searches in the song's own language and picks the official recording.",
   "homepage": "https://github.com/prakha194/Melzo-Extension",
   "category": "tools",
   "tags": [
